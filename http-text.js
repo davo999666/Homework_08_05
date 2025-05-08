@@ -17,13 +17,9 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
      const value = req.url
     const homework = value.split('=')
-    console.log(homework[0]);
-    // res.write(`<h1>Hello ${homework[0]}</h1>`);
     if(homework[0] === '/name'){
         res.write(`<h1>Hello ${homework[1]}</h1>`);
     }
-
-
     // if (req.url === '/group') {
     //     res.write('<h1>Hello Group</h1>');
     // }
